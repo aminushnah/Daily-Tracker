@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Track | Manage Your Tasks Smartly</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>Daily Track</h1>
+      <p>Plans in motion, progress in action!!</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+
+      <!-- Input Section -->
+      <section class="input-section" aria-label="Add new task">
+        <div class="input-group">
+          <input 
+            type="text" 
+            class="task-input" 
+            id="taskInput" 
+            placeholder="What needs to be done today?" 
+            maxlength="100"
+            aria-label="Task input field"
+          />
+          <button class="add-btn" id="addTaskBtn" aria-label="Add task">+ Add</button>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats" aria-label="Task statistics">
+        <div class="stat-item">
+          <div class="stat-number" id="totalTasks">0</div>
+          <div class="stat-label">Total</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="completedTasks">0</div>
+          <div class="stat-label">Done</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="pendingTasks">0</div>
+          <div class="stat-label">Pending</div>
+        </div>
+      </section>
+
+      <!-- Tasks Section -->
+      <section id="tasksContainer" aria-label="Task list">
+        <div class="empty-state" id="emptyState">
+          <h3>📝 No tasks yet</h3>
+          <p>Add your first task to get started!</p>
+        </div>
+        <ul class="tasks-list" id="tasksList" role="list"></ul>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Daily Track | by ❤️ Ushnah Amin</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
